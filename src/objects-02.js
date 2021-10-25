@@ -87,7 +87,7 @@ const colorHexCodes = {
  * must use colorHexCodes as a lookup table
  */
 function getColorValue(color) {
-  return getColorValue('Teal');
+  return colorHexCodes[color];
 }
 
 /**
@@ -107,7 +107,7 @@ function getColorValue(color) {
  * Mozilla - https://mzl.la/3F6tk0F
  */
 function testForColor(color) {
-  if (Object.hasOwn('Teal') === true) {
+  if (colorHexCodes.hasOwnProperty(color) === true) {
     return true;
   }
   return false;
